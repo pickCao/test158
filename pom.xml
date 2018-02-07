@@ -59,10 +59,39 @@
 			<artifactId>guice</artifactId>
 			<version>3.0</version>
 		</dependency>
-		
+
 	</dependencies>
 
 	<build>
 		<finalName>test158</finalName>
+
+		<!-- maven运行testng -->
+		<plugins>
+
+			<plugin>
+			<!-- 编译器 -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>${jdk.level}</source>
+					<target>${jdk.level}</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+			<!-- 执行TestNG的编译类 -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<suiteXmlFiles>
+						<!-- TestNG suite XML files -->
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+
 	</build>
 </project>

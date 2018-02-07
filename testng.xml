@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="default">
+	<test name="default">
+		<classes>
+			<class name="com.example.test.FormTest"></class>
+		</classes>
+	</test>
+</suite>
